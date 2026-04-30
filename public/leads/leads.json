@@ -1,0 +1,857 @@
+[
+  {
+    "id": 1,
+    "restaurant_name": "Emmett's",
+    "address": "50 MacDougal St, New York, NY 10012",
+    "website": "https://www.emmettsnyc.com/",
+    "phone": "(917) 639-3571",
+    "menu_items": [
+      "Deep Dish Pizza",
+      "Thin Crust Pizza",
+      "Chicago Style Hot Dog",
+      "Baby Back Ribs"
+    ],
+    "hours": "Mon-Tue 5pm-11pm, Wed 12pm-11pm, Fri-Sat 12pm-1am, Sun 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Emmett's\n\nHi Team,\n\nI'm a huge fan of Emmett's and your Deep Dish Pizza. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 2,
+    "restaurant_name": "L'Industrie Pizzeria",
+    "address": "254 S 2nd St, Brooklyn, NY 11211",
+    "website": "https://www.lindustriebk.com/",
+    "phone": "(718) 599-0002",
+    "menu_items": [
+      "Burrata Slice",
+      "Fig Jam & Bacon",
+      "Margherita",
+      "New York Slice"
+    ],
+    "hours": "Daily 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with L'Industrie Pizzeria\n\nHi Team,\n\nI'm a huge fan of L'Industrie Pizzeria and your Burrata Slice. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 3,
+    "restaurant_name": "Una Pizza Napoletana",
+    "address": "175 Orchard St, New York, NY 10002",
+    "website": "https://www.unapizza.com/",
+    "phone": "(646) 476-4457",
+    "menu_items": [
+      "Margherita",
+      "Marinara",
+      "Cosacca",
+      "Filetto"
+    ],
+    "hours": "Thu-Sat 5pm-Sold Out",
+    "email_content": "Subject: Partnership Opportunity with Una Pizza Napoletana\n\nHi Team,\n\nI'm a huge fan of Una Pizza Napoletana and your Margherita. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 4,
+    "restaurant_name": "Mama's Too",
+    "address": "2750 Broadway, New York, NY 10025",
+    "website": "https://www.mamastoo.com/",
+    "phone": "(212) 510-7256",
+    "menu_items": [
+      "Vodka Slice",
+      "House Slice",
+      "Pepperoni Square",
+      "Poached Pear Slice"
+    ],
+    "hours": "Daily 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Mama's Too\n\nHi Team,\n\nI'm a huge fan of Mama's Too and your Vodka Slice. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 5,
+    "restaurant_name": "Lucia Pizza of SoHo",
+    "address": "375 Canal St, New York, NY 10013",
+    "website": "https://www.luciapizzaofsoho.com/",
+    "phone": "(917) 965-2900",
+    "menu_items": [
+      "Vodka Pie",
+      "Regular Slice",
+      "Creamed Spinach Slice",
+      "Clam Pie"
+    ],
+    "hours": "Mon-Wed 11am-10pm, Thu-Sat 11am-12am, Sun 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Lucia Pizza of SoHo\n\nHi Team,\n\nI'm a huge fan of Lucia Pizza of SoHo and your Vodka Pie. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 6,
+    "restaurant_name": "Scarr's Pizza",
+    "address": "35 Orchard St, New York, NY 10002",
+    "website": "https://www.scarrspizza.com/",
+    "phone": "(212) 334-3481",
+    "menu_items": [
+      "Original Slice",
+      "Vegan Caesar",
+      "Hotboi",
+      "Sicilian"
+    ],
+    "hours": "Daily 12pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Scarr's Pizza\n\nHi Team,\n\nI'm a huge fan of Scarr's Pizza and your Original Slice. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 7,
+    "restaurant_name": "Best Pizza",
+    "address": "33 Havemeyer St, Brooklyn, NY 11211",
+    "website": "https://www.bestpizzawilliamsburg.com/",
+    "phone": "(718) 599-2210",
+    "menu_items": [
+      "White Pizza",
+      "Grandma Slice",
+      "Meatball Sub",
+      "Kale Salad"
+    ],
+    "hours": "Daily 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Best Pizza\n\nHi Team,\n\nI'm a huge fan of Best Pizza and your White Pizza. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 8,
+    "restaurant_name": "Lucali",
+    "address": "575 Henry St, Brooklyn, NY 11231",
+    "website": "https://www.lucali.com/",
+    "phone": "(718) 858-4086",
+    "menu_items": [
+      "Pizza",
+      "Calzone",
+      "Meatballs",
+      "Artichokes"
+    ],
+    "hours": "Wed-Mon 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Lucali\n\nHi Team,\n\nI'm a huge fan of Lucali and your Pizza. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 9,
+    "restaurant_name": "Don Antonio",
+    "address": "309 W 50th St, New York, NY 10019",
+    "website": "https://www.donantoniopizza.com/",
+    "phone": "(646) 719-1043",
+    "menu_items": [
+      "Montanara",
+      "Keste",
+      "Margherita Gold",
+      "Gluten Free Pizza"
+    ],
+    "hours": "Daily 11:30am-10:30pm",
+    "email_content": "Subject: Partnership Opportunity with Don Antonio\n\nHi Team,\n\nI'm a huge fan of Don Antonio and your Montanara. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 10,
+    "restaurant_name": "Joe's Pizza",
+    "address": "7 Carmine St, New York, NY 10014",
+    "website": "https://www.joespizzanyc.com/",
+    "phone": "(212) 366-1182",
+    "menu_items": [
+      "Cheese Slice",
+      "Mozzarella Pie",
+      "Sicilian Square",
+      "White Pizza"
+    ],
+    "hours": "Daily 10am-4am",
+    "email_content": "Subject: Partnership Opportunity with Joe's Pizza\n\nHi Team,\n\nI'm a huge fan of Joe's Pizza and your Cheese Slice. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 11,
+    "restaurant_name": "L&B Spumoni Gardens",
+    "address": "2725 86th St, Brooklyn, NY 11223",
+    "website": "https://spumonigardens.com/",
+    "phone": "(718) 449-1230",
+    "menu_items": [
+      "Square Slice",
+      "Spumoni",
+      "Round Pie",
+      "Chef Salad"
+    ],
+    "hours": "Daily 11am-11pm",
+    "email_content": "Subject: Partnership Opportunity with L&B Spumoni Gardens\n\nHi Team,\n\nI'm a huge fan of L&B Spumoni Gardens and your Square Slice. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 12,
+    "restaurant_name": "Rubirosa",
+    "address": "235 Mulberry St, New York, NY 10012",
+    "website": "https://www.rubirosanyc.com/",
+    "phone": "(212) 965-0500",
+    "menu_items": [
+      "Tie-Dye Pizza",
+      "Vodka Pizza",
+      "Rice Balls",
+      "Calamari"
+    ],
+    "hours": "Daily 11am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Rubirosa\n\nHi Team,\n\nI'm a huge fan of Rubirosa and your Tie-Dye Pizza. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 13,
+    "restaurant_name": "Di Fara Pizza",
+    "address": "1424 Avenue J, Brooklyn, NY 11230",
+    "website": "https://www.difarapizzany.com/",
+    "phone": "(718) 258-1367",
+    "menu_items": [
+      "Regular Pie",
+      "Square Pie",
+      "Broccoli Rabe Slice",
+      "Artichoke Slice"
+    ],
+    "hours": "Tue-Sun 12pm-8pm",
+    "email_content": "Subject: Partnership Opportunity with Di Fara Pizza\n\nHi Team,\n\nI'm a huge fan of Di Fara Pizza and your Regular Pie. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 14,
+    "restaurant_name": "Paulie Gee's Slice Shop",
+    "address": "110 Franklin St, Brooklyn, NY 11222",
+    "website": "https://pauliegee.com/slice-shop/",
+    "phone": "(929) 337-6384",
+    "menu_items": [
+      "Hellboy",
+      "Freddy Prince",
+      "Moo Moo",
+      "Vegan Square"
+    ],
+    "hours": "Daily 11:30am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Paulie Gee's Slice Shop\n\nHi Team,\n\nI'm a huge fan of Paulie Gee's Slice Shop and your Hellboy. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 15,
+    "restaurant_name": "John's of Bleecker Street",
+    "address": "278 Bleecker St, New York, NY 10014",
+    "website": "https://www.johnsofbleeckerstreet.com/",
+    "phone": "(212) 243-1680",
+    "menu_items": [
+      "Cheese Pie",
+      "Sasso",
+      "The Boom",
+      "Meatball Pie"
+    ],
+    "hours": "Daily 11:30am-11pm",
+    "email_content": "Subject: Partnership Opportunity with John's of Bleecker Street\n\nHi Team,\n\nI'm a huge fan of John's of Bleecker Street and your Cheese Pie. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 16,
+    "restaurant_name": "Prince Street Pizza",
+    "address": "27 Prince St, New York, NY 10012",
+    "website": "https://www.princestreetpizza.com/",
+    "phone": "(212) 966-4100",
+    "menu_items": [
+      "Spicy Spring",
+      "Prince Perfection",
+      "Mercer Margherita",
+      "Fancy Prince"
+    ],
+    "hours": "Daily 10am-2am",
+    "email_content": "Subject: Partnership Opportunity with Prince Street Pizza\n\nHi Team,\n\nI'm a huge fan of Prince Street Pizza and your Spicy Spring. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 17,
+    "restaurant_name": "Hawksmoor NYC",
+    "address": "109 E 22nd St, New York, NY 10010",
+    "website": "https://www.hawksmoornyc.com/",
+    "phone": "(212) 777-1840",
+    "menu_items": [
+      "Rib-eye",
+      "Bone Marrow Gravy",
+      "Anchovy Hollandaise",
+      "Sunday Roast"
+    ],
+    "hours": "Mon-Sat 5pm-11pm, Sun 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Hawksmoor NYC\n\nHi Team,\n\nI'm a huge fan of Hawksmoor NYC and your Rib-eye. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 18,
+    "restaurant_name": "4 Charles Prime Rib",
+    "address": "4 Charles St, New York, NY 10014",
+    "website": "https://www.nycprimerib.com/",
+    "phone": "(212) 561-5992",
+    "menu_items": [
+      "Prime Rib",
+      "French Dip",
+      "Burger",
+      "Creamed Spinach"
+    ],
+    "hours": "Mon-Fri 5pm-11:30pm, Sat-Sun 11am-11:30pm",
+    "email_content": "Subject: Partnership Opportunity with 4 Charles Prime Rib\n\nHi Team,\n\nI'm a huge fan of 4 Charles Prime Rib and your Prime Rib. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 19,
+    "restaurant_name": "Keens Steakhouse",
+    "address": "72 W 36th St, New York, NY 10018",
+    "website": "https://www.keens.com/",
+    "phone": "(212) 947-3636",
+    "menu_items": [
+      "Mutton Chop",
+      "Prime Porterhouse",
+      "Oysters Rockefeller",
+      "Keens Cheesecake"
+    ],
+    "hours": "Mon-Fri 11:45am-10:30pm, Sat 5pm-10:30pm, Sun 5pm-9:30pm",
+    "email_content": "Subject: Partnership Opportunity with Keens Steakhouse\n\nHi Team,\n\nI'm a huge fan of Keens Steakhouse and your Mutton Chop. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 20,
+    "restaurant_name": "Peter Luger",
+    "address": "178 Broadway, Brooklyn, NY 11211",
+    "website": "https://peterluger.com/",
+    "phone": "(718) 387-7400",
+    "menu_items": [
+      "Steak for Two",
+      "Luger Burger",
+      "Creamed Spinach",
+      "Bacon"
+    ],
+    "hours": "Daily 11:45am-9:45pm",
+    "email_content": "Subject: Partnership Opportunity with Peter Luger\n\nHi Team,\n\nI'm a huge fan of Peter Luger and your Steak for Two. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 21,
+    "restaurant_name": "Smith & Wollensky",
+    "address": "797 3rd Ave, New York, NY 10022",
+    "website": "https://www.smithandwollensky.com/",
+    "phone": "(212) 753-1530",
+    "menu_items": [
+      "Dry-Aged Ribeye",
+      "Shellfish Bouquet",
+      "Colorado Rack of Lamb",
+      "Coconut Layer Cake"
+    ],
+    "hours": "Daily 11:30am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Smith & Wollensky\n\nHi Team,\n\nI'm a huge fan of Smith & Wollensky and your Dry-Aged Ribeye. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 22,
+    "restaurant_name": "Old Homestead Steakhouse",
+    "address": "56 9th Ave, New York, NY 10011",
+    "website": "https://theoldhomesteadsteakhouse.com/",
+    "phone": "(212) 242-9040",
+    "menu_items": [
+      "Japanese Wagyu",
+      "Prime Rib",
+      "Garlic Mashed Potatoes",
+      "Crab Cake"
+    ],
+    "hours": "Mon-Fri 12pm-10:30pm, Sat 1pm-11pm, Sun 1pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Old Homestead Steakhouse\n\nHi Team,\n\nI'm a huge fan of Old Homestead Steakhouse and your Japanese Wagyu. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 23,
+    "restaurant_name": "Bowery Meat Company",
+    "address": "9 E 1st St, New York, NY 10003",
+    "website": "https://www.bowerymeatcompany.com/",
+    "phone": "(212) 460-5255",
+    "menu_items": [
+      "Duck Lasagna",
+      "Wagyu Meatballs",
+      "Ribeye",
+      "Cheeseburger"
+    ],
+    "hours": "Sun-Thu 5pm-10pm, Fri-Sat 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Bowery Meat Company\n\nHi Team,\n\nI'm a huge fan of Bowery Meat Company and your Duck Lasagna. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 24,
+    "restaurant_name": "Gallaghers Steakhouse",
+    "address": "228 W 52nd St, New York, NY 10019",
+    "website": "https://www.gallaghersnysteakhouse.com/",
+    "phone": "(212) 586-5000",
+    "menu_items": [
+      "Hickory Grilled Ribeye",
+      "Clams Casino",
+      "Lamb Chops",
+      "Key Lime Pie"
+    ],
+    "hours": "Daily 11:30am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Gallaghers Steakhouse\n\nHi Team,\n\nI'm a huge fan of Gallaghers Steakhouse and your Hickory Grilled Ribeye. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 25,
+    "restaurant_name": "Wolfgang's Steakhouse",
+    "address": "4 Park Ave, New York, NY 10016",
+    "website": "https://wolfgangssteakhouse.net/",
+    "phone": "(212) 889-3369",
+    "menu_items": [
+      "Porterhouse",
+      "German Potatoes",
+      "Sizzling Canadian Bacon",
+      "Lobster Mac & Cheese"
+    ],
+    "hours": "Daily 12pm-10:30pm",
+    "email_content": "Subject: Partnership Opportunity with Wolfgang's Steakhouse\n\nHi Team,\n\nI'm a huge fan of Wolfgang's Steakhouse and your Porterhouse. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 26,
+    "restaurant_name": "St. Anselm",
+    "address": "355 Metropolitan Ave, Brooklyn, NY 11211",
+    "website": "https://www.stanselm.net/",
+    "phone": "(718) 384-5054",
+    "menu_items": [
+      "Butcher's Steak",
+      "Ax Handle Ribeye",
+      "Grilled Sardines",
+      "Pan-Fried Mashed Potatoes"
+    ],
+    "hours": "Mon-Thu 5pm-11pm, Fri 5pm-12am, Sat 11am-12am, Sun 11am-11pm",
+    "email_content": "Subject: Partnership Opportunity with St. Anselm\n\nHi Team,\n\nI'm a huge fan of St. Anselm and your Butcher's Steak. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 27,
+    "restaurant_name": "Cote Korean Steakhouse",
+    "address": "16 W 22nd St, New York, NY 10010",
+    "website": "https://www.cotenyc.com/",
+    "phone": "(212) 401-7986",
+    "menu_items": [
+      "Butcher's Feast",
+      "A5 Wagyu",
+      "Kimchi Stew",
+      "Egg Soufflé"
+    ],
+    "hours": "Daily 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Cote Korean Steakhouse\n\nHi Team,\n\nI'm a huge fan of Cote Korean Steakhouse and your Butcher's Feast. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 28,
+    "restaurant_name": "Carbone",
+    "address": "181 Thompson St, New York, NY 10012",
+    "website": "https://carbonenewyork.com/",
+    "phone": "(212) 254-3000",
+    "menu_items": [
+      "Spicy Rigatoni Vodka",
+      "Veal Parmesan",
+      "Caesar Salad",
+      "Carrot Cake"
+    ],
+    "hours": "Daily 11:30am-2pm, 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Carbone\n\nHi Team,\n\nI'm a huge fan of Carbone and your Spicy Rigatoni Vodka. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 29,
+    "restaurant_name": "L'Artusi",
+    "address": "228 W 10th St, New York, NY 10014",
+    "website": "https://www.lartusi.com/",
+    "phone": "(212) 255-5757",
+    "menu_items": [
+      "Roasted Mushrooms",
+      "Spaghetti",
+      "Branzino",
+      "Olive Oil Cake"
+    ],
+    "hours": "Daily 5pm-11pm, Sat-Sun Brunch 11am-2pm",
+    "email_content": "Subject: Partnership Opportunity with L'Artusi\n\nHi Team,\n\nI'm a huge fan of L'Artusi and your Roasted Mushrooms. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 30,
+    "restaurant_name": "Don Angie",
+    "address": "103 Greenwich Ave, New York, NY 10014",
+    "website": "https://www.donangie.com/",
+    "phone": "(212) 889-8884",
+    "menu_items": [
+      "Lasagna for Two",
+      "Chrysanthemum Salad",
+      "Stuffed Garlic Flatbread",
+      "Garganelli"
+    ],
+    "hours": "Daily 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Don Angie\n\nHi Team,\n\nI'm a huge fan of Don Angie and your Lasagna for Two. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 31,
+    "restaurant_name": "Via Carota",
+    "address": "51 Grove St, New York, NY 10014",
+    "website": "https://www.viacarota.com/",
+    "phone": "(212) 255-1962",
+    "menu_items": [
+      "Insalata Verde",
+      "Cacio e Pepe",
+      "Polpette",
+      "Svizzera Burger"
+    ],
+    "hours": "Daily 11am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Via Carota\n\nHi Team,\n\nI'm a huge fan of Via Carota and your Insalata Verde. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 32,
+    "restaurant_name": "Rezdôra",
+    "address": "27 E 20th St, New York, NY 10003",
+    "website": "https://www.rezdoranyc.com/",
+    "phone": "(646) 692-9090",
+    "menu_items": [
+      "Grandma Walking in Forest",
+      "Tagliolini",
+      "Gnocco Fritto",
+      "Strozzapreti"
+    ],
+    "hours": "Daily 12pm-2:30pm, 5pm-10:30pm",
+    "email_content": "Subject: Partnership Opportunity with Rezdôra\n\nHi Team,\n\nI'm a huge fan of Rezdôra and your Grandma Walking in Forest. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 33,
+    "restaurant_name": "Misi",
+    "address": "329 Kent Ave, Brooklyn, NY 11249",
+    "website": "https://www.misinewyork.com/",
+    "phone": "(347) 566-3262",
+    "menu_items": [
+      "Sheep's Milk Ricotta OCchi",
+      "Fettuccine",
+      "Roasted Eggplant",
+      "Gelato"
+    ],
+    "hours": "Daily 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Misi\n\nHi Team,\n\nI'm a huge fan of Misi and your Sheep's Milk Ricotta OCchi. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 34,
+    "restaurant_name": "I Sodi",
+    "address": "314 Bleecker St, New York, NY 10014",
+    "website": "https://www.isodinyc.com/",
+    "phone": "(212) 414-5774",
+    "menu_items": [
+      "Lasagna a Sugho",
+      "Cacio e Pepe",
+      "Fried Artichokes",
+      "Steak Tartare"
+    ],
+    "hours": "Daily 4:30pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with I Sodi\n\nHi Team,\n\nI'm a huge fan of I Sodi and your Lasagna a Sugho. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 35,
+    "restaurant_name": "Ci Siamo",
+    "address": "440 W 33rd St, New York, NY 10001",
+    "website": "https://www.cisiamonyc.com/",
+    "phone": "",
+    "menu_items": [
+      "Caramelized Onion Torta",
+      "Rigatoni",
+      "Whole Trout",
+      "Gelato"
+    ],
+    "hours": "Daily 5pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Ci Siamo\n\nHi Team,\n\nI'm a huge fan of Ci Siamo and your Caramelized Onion Torta. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 36,
+    "restaurant_name": "Il Mulino",
+    "address": "86 W 3rd St, New York, NY 10012",
+    "website": "https://www.ilmulino.com/",
+    "phone": "(212) 673-3783",
+    "menu_items": [
+      "Porcini Ravioli",
+      "Langoustines",
+      "Osso Buco",
+      "Cheesecake"
+    ],
+    "hours": "Mon-Fri 12pm-11pm, Sat 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Il Mulino\n\nHi Team,\n\nI'm a huge fan of Il Mulino and your Porcini Ravioli. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 37,
+    "restaurant_name": "Torrisi",
+    "address": "275 Mulberry St, New York, NY 10012",
+    "website": "https://www.torrisinyc.com/",
+    "phone": "(212) 254-3000",
+    "menu_items": [
+      "Tortellini Pomodoro",
+      "Dover Sole",
+      "Cucumber Salad",
+      "Jamaican Beef Patty"
+    ],
+    "hours": "Daily 5pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Torrisi\n\nHi Team,\n\nI'm a huge fan of Torrisi and your Tortellini Pomodoro. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 38,
+    "restaurant_name": "Sushi Nakazawa",
+    "address": "23 Commerce St, New York, NY 10014",
+    "website": "https://www.sushinakazawa.com/",
+    "phone": "(212) 924-2212",
+    "menu_items": [
+      "Omakase",
+      "Sake Pairing",
+      "Egg Custard",
+      "Tuna Flight"
+    ],
+    "hours": "Mon-Fri 5pm-10pm, Sat-Sun 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Sushi Nakazawa\n\nHi Team,\n\nI'm a huge fan of Sushi Nakazawa and your Omakase. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 39,
+    "restaurant_name": "Masa",
+    "address": "10 Columbus Cir, New York, NY 10019",
+    "website": "https://www.masanyc.com/",
+    "phone": "(212) 823-9800",
+    "menu_items": [
+      "Omakase",
+      "Kobe Beef",
+      "Truffle Sushi",
+      "Seasonal Fish"
+    ],
+    "hours": "Tue-Sat 12pm-1pm, 5pm-8pm",
+    "email_content": "Subject: Partnership Opportunity with Masa\n\nHi Team,\n\nI'm a huge fan of Masa and your Omakase. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 40,
+    "restaurant_name": "Sugarfish",
+    "address": "33 E 20th St, New York, NY 10003",
+    "website": "https://sugarfishsushi.com/",
+    "phone": "(347) 705-8100",
+    "menu_items": [
+      "Trust Me",
+      "Nozawa Trust Me",
+      "Tuna Sashimi",
+      "Blue Crab Hand Roll"
+    ],
+    "hours": "Daily 11:30am-10pm",
+    "email_content": "Subject: Partnership Opportunity with Sugarfish\n\nHi Team,\n\nI'm a huge fan of Sugarfish and your Trust Me. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 41,
+    "restaurant_name": "Sushi Yasuda",
+    "address": "204 E 43rd St, New York, NY 10017",
+    "website": "https://www.sushiyasuda.com/",
+    "phone": "(212) 972-1001",
+    "menu_items": [
+      "Omakase",
+      "Uni",
+      "Eel",
+      "Salmon Roe"
+    ],
+    "hours": "Mon-Fri 12pm-2pm, 6pm-10pm, Sat 6pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Sushi Yasuda\n\nHi Team,\n\nI'm a huge fan of Sushi Yasuda and your Omakase. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 42,
+    "restaurant_name": "KazuNori",
+    "address": "15 W 28th St, New York, NY 10001",
+    "website": "https://www.kazunorisushi.com/",
+    "phone": "(347) 594-5940",
+    "menu_items": [
+      "Set Menu 3-6 Hand Rolls",
+      "Lobster Hand Roll",
+      "Toro Hand Roll",
+      "Sashimi"
+    ],
+    "hours": "Daily 11:30am-11pm",
+    "email_content": "Subject: Partnership Opportunity with KazuNori\n\nHi Team,\n\nI'm a huge fan of KazuNori and your Set Menu 3-6 Hand Rolls. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 43,
+    "restaurant_name": "Sushi Noz",
+    "address": "181 E 78th St, New York, NY 10075",
+    "website": "https://www.sushinoz.com/",
+    "phone": "(917) 338-1792",
+    "menu_items": [
+      "Omakase",
+      "Ash Room Menu",
+      "Uni",
+      "Abalone"
+    ],
+    "hours": "Tue-Sat 6pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Sushi Noz\n\nHi Team,\n\nI'm a huge fan of Sushi Noz and your Omakase. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 44,
+    "restaurant_name": "Shuko",
+    "address": "47 E 12th St, New York, NY 10003",
+    "website": "https://www.shukonyc.com/",
+    "phone": "(212) 228-6088",
+    "menu_items": [
+      "Omakase",
+      "Sushi Union",
+      "Spicy Tuna",
+      "Milk Bread"
+    ],
+    "hours": "Tue-Sat 5:30pm-10:30pm",
+    "email_content": "Subject: Partnership Opportunity with Shuko\n\nHi Team,\n\nI'm a huge fan of Shuko and your Omakase. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 45,
+    "restaurant_name": "Nami Nori",
+    "address": "33 Carmine St, New York, NY 10014",
+    "website": "https://naminori.nyc/",
+    "phone": "(646) 998-4588",
+    "menu_items": [
+      "Signature Set",
+      "Spicy Crab Dynamite",
+      "X.O. Scallop",
+      "Tuna Poke"
+    ],
+    "hours": "Daily 12pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Nami Nori\n\nHi Team,\n\nI'm a huge fan of Nami Nori and your Signature Set. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 46,
+    "restaurant_name": "Momoya",
+    "address": "185 7th Ave, New York, NY 10011",
+    "website": "https://www.momoyanyc.com/",
+    "phone": "(212) 989-4466",
+    "menu_items": [
+      "Lunch Special",
+      "Spicy Tuna Crunch",
+      "Yellowtail Jalapeno",
+      "Miso Soup"
+    ],
+    "hours": "Daily 12pm-10:30pm",
+    "email_content": "Subject: Partnership Opportunity with Momoya\n\nHi Team,\n\nI'm a huge fan of Momoya and your Lunch Special. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 47,
+    "restaurant_name": "Blue Ribbon Sushi",
+    "address": "119 Sullivan St, New York, NY 10012",
+    "website": "https://www.blueribbonrestaurants.com/",
+    "phone": "(212) 343-0404",
+    "menu_items": [
+      "Dragon Roll",
+      "Sushi Platter",
+      "Fried Chicken",
+      "Oxtail Fried Rice"
+    ],
+    "hours": "Daily 4pm-12am",
+    "email_content": "Subject: Partnership Opportunity with Blue Ribbon Sushi\n\nHi Team,\n\nI'm a huge fan of Blue Ribbon Sushi and your Dragon Roll. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 48,
+    "restaurant_name": "Los Tacos No. 1",
+    "address": "75 9th Ave, New York, NY 10011",
+    "website": "https://www.lostacos1.com/",
+    "phone": "(212) 256-0343",
+    "menu_items": [
+      "Adobada Taco",
+      "Carne Asada Taco",
+      "Nopal Taco",
+      "Quesadilla"
+    ],
+    "hours": "Daily 11am-10pm",
+    "email_content": "Subject: Partnership Opportunity with Los Tacos No. 1\n\nHi Team,\n\nI'm a huge fan of Los Tacos No. 1 and your Adobada Taco. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 49,
+    "restaurant_name": "Tacombi",
+    "address": "267 Elizabeth St, New York, NY 10012",
+    "website": "https://www.tacombi.com/",
+    "phone": "(646) 397-6889",
+    "menu_items": [
+      "Al Pastor",
+      "Baja Crispy Fish",
+      "Corn Esquites",
+      "Watermelon Juice"
+    ],
+    "hours": "Daily 11am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Tacombi\n\nHi Team,\n\nI'm a huge fan of Tacombi and your Al Pastor. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 50,
+    "restaurant_name": "Empellón Taqueria",
+    "address": "230 W 4th St, New York, NY 10014",
+    "website": "https://www.empellon.com/",
+    "phone": "(212) 380-1215",
+    "menu_items": [
+      "Lamb Barbacoa",
+      "Short Rib Pastrami",
+      "Guacamole",
+      "Churros"
+    ],
+    "hours": "Mon-Fri 5pm-11pm, Sat-Sun 12pm-11pm",
+    "email_content": "Subject: Partnership Opportunity with Empellón Taqueria\n\nHi Team,\n\nI'm a huge fan of Empellón Taqueria and your Lamb Barbacoa. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 51,
+    "restaurant_name": "Cosme",
+    "address": "35 E 21st St, New York, NY 10010",
+    "website": "https://www.cosmenyc.com/",
+    "phone": "(212) 913-9659",
+    "menu_items": [
+      "Duck Carnitas",
+      "Corn Husk Meringue",
+      "Uni Tostada",
+      "Short Rib"
+    ],
+    "hours": "Daily 5pm-11pm, Sat-Sun Brunch 12pm-2:30pm",
+    "email_content": "Subject: Partnership Opportunity with Cosme\n\nHi Team,\n\nI'm a huge fan of Cosme and your Duck Carnitas. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 52,
+    "restaurant_name": "Taqueria Ramirez",
+    "address": "94 Franklin St, Brooklyn, NY 11222",
+    "website": "https://www.instagram.com/taqueria_ramirez/",
+    "phone": "",
+    "menu_items": [
+      "Al Pastor",
+      "Suadero",
+      "Longaniza",
+      "Tripe"
+    ],
+    "hours": "Wed-Sun 5pm-10pm",
+    "email_content": "Subject: Partnership Opportunity with Taqueria Ramirez\n\nHi Team,\n\nI'm a huge fan of Taqueria Ramirez and your Al Pastor. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 53,
+    "restaurant_name": "Birria-Landia",
+    "address": "77-99 Roosevelt Ave, Queens, NY 11372",
+    "website": "https://birrialandia.com/",
+    "phone": "(347) 283-2162",
+    "menu_items": [
+      "Birria Taco",
+      "Consome",
+      "Mulita",
+      "Tostada"
+    ],
+    "hours": "Daily 5pm-1am",
+    "email_content": "Subject: Partnership Opportunity with Birria-Landia\n\nHi Team,\n\nI'm a huge fan of Birria-Landia and your Birria Taco. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 54,
+    "restaurant_name": "Oxomoco",
+    "address": "128 Greenpoint Ave, Brooklyn, NY 11222",
+    "website": "https://www.oxomoconyc.com/",
+    "phone": "(646) 688-4180",
+    "menu_items": [
+      "Lamb Barbacoa",
+      "Beet Chorizo",
+      "Guacamole",
+      "Frozen Margaritas"
+    ],
+    "hours": "Daily 5:30pm-10pm, Sat-Sun Brunch 11am-2:30pm",
+    "email_content": "Subject: Partnership Opportunity with Oxomoco\n\nHi Team,\n\nI'm a huge fan of Oxomoco and your Lamb Barbacoa. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 55,
+    "restaurant_name": "Claro",
+    "address": "284 3rd Ave, Brooklyn, NY 11215",
+    "website": "https://www.clarobk.com/",
+    "phone": "(347) 721-3126",
+    "menu_items": [
+      "Mole Poblano",
+      "Tostadas",
+      "Memelas",
+      "Mezcal Flight"
+    ],
+    "hours": "Daily 5pm-10pm, Sat-Sun Brunch 11:30am-3pm",
+    "email_content": "Subject: Partnership Opportunity with Claro\n\nHi Team,\n\nI'm a huge fan of Claro and your Mole Poblano. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 56,
+    "restaurant_name": "Casa Enrique",
+    "address": "5-48 49th Ave, Long Island City, NY 11101",
+    "website": "https://www.casaenriqueny.com/",
+    "phone": "(347) 448-6040",
+    "menu_items": [
+      "Mole de Piaxtla",
+      "Cochinita Pibil",
+      "Tacos de Pescado",
+      "Pastel de Tres Leches"
+    ],
+    "hours": "Daily 5pm-10:30pm, Sat-Sun Brunch 11am-3pm",
+    "email_content": "Subject: Partnership Opportunity with Casa Enrique\n\nHi Team,\n\nI'm a huge fan of Casa Enrique and your Mole de Piaxtla. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  },
+  {
+    "id": 57,
+    "restaurant_name": "Toloache",
+    "address": "251 W 50th St, New York, NY 10019",
+    "website": "https://www.toloachenyc.com/",
+    "phone": "(212) 581-1818",
+    "menu_items": [
+      "Tacos de Chapulines",
+      "Guacamole Trio",
+      "Costilla Tacos",
+      "Truffle Quesadilla"
+    ],
+    "hours": "Daily 11:30am-11pm",
+    "email_content": "Subject: Partnership Opportunity with Toloache\n\nHi Team,\n\nI'm a huge fan of Toloache and your Tacos de Chapulines. I help NYC restaurants like yours optimize their digital presence. Would you be open to a quick chat?"
+  }
+]
