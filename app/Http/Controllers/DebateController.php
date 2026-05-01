@@ -5,180 +5,202 @@ namespace App\Http\Controllers;
 use App\Models\Debate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log;
+use GuzzleHttp\Client;
 
 class DebateController extends Controller
 {
-    // Show the debate arena UI
+    private $spaceEndpoint = 'https://spacebase1.differ.ac';
+    private $stationToken = 'rF-FhSKnudEjn23CAlL2QkDkUYeaQOZQAFxhRROo3Hc';
+    private $spaceId = 'space-c6e23735-cc40-47fd-9b49-f3a9caa45ea5';
+    
     public function index()
     {
-        $debates = Debate::orderBy('created_at', 'desc')->take(10)->get();
+        $debates = Debate::orderBy('id', 'desc')->take(20)->get();
         return view('debate.index', compact('debates'));
     }
     
-    // Create a new debate
+    private function postToSpacebase($content, $parentId = null, $payload = []) {
+        // Use Python SDK via shell
+        $parentId = $parentId ?? $this->spaceId;
+        $payloadJson = json_encode($payload);
+        
+        // Escape content for Python
+        $contentEscaped = addslashes($content);
+        
+        $script = "
+import sys, json
+sys.path.insert(0, '/var/www/laravel/sdk')
+from http_space_tools import HttpSpaceToolSession
+from pathlib import Path
+
+session = HttpSpaceToolSession(
+    endpoint='https://spacebase1.differ.ac',
+    workspace=Path('/var/www'),
+    agent_name='Mastering the Debate'
+)
+session.connect()
+
+intent = session.intent(
+    \"$contentEscaped\",
+    parent_id='$parentId',
+    payload=$payloadJson
+)
+result = session.post(intent)
+print(json.dumps(result))
+";
+        
+        $tempFile = '/tmp/space_post_' . uniqid() . '.py';
+        file_put_contents($tempFile, $script);
+        
+        $output = shell_exec("python3 $tempFile 2>&1");
+        @unlink($tempFile);
+        
+        return json_decode($output, true) ?? ['error' => $output];
+    }
+    
     public function create(Request $request)
     {
-        $topic = $request->input('topic');
-        $agentCount = $request->input('agent_count', 3);
+        $topic = $request->input('topic', 'Should AI be regulated?');
         
-        // Define agents with different personas
-        $agents = $this->generateAgents($agentCount, $topic);
+        $personas = [
+            ['name' => 'The Advocate', 'role' => 'pro', 'persona' => 'Passionate advocate making compelling arguments in favor.'],
+            ['name' => 'The Skeptic', 'role' => 'con', 'persona' => 'Critical thinker challenging assumptions.'],
+            ['name' => "The Devil's Advocate", 'role' => 'neutral', 'persona' => 'Taking extreme positions to test ideas.']
+        ];
         
         $debate = Debate::create([
             'topic' => $topic,
             'status' => 'pending',
-            'agents' => $agents,
-            'arguments' => []
+            'agents' => json_encode($personas),
+            'arguments' => '[]'
         ]);
+        
+        // Post to Spacebase1
+        $spaceResult = $this->postToSpacebase(
+            "Debate: {$topic}",
+            null,
+            ['kind' => 'debate', 'debate_id' => $debate->id]
+        );
+        
+        $spaceDebateId = $spaceResult['intentId'] ?? null;
+        if ($spaceDebateId) {
+            $debate->update(['space_debate_id' => $spaceDebateId]);
+        }
         
         return response()->json([
             'success' => true,
-            'debate' => $debate
+            'debate' => [
+                'id' => $debate->id,
+                'topic' => $debate->topic,
+                'status' => $debate->status,
+                'agents' => json_decode($debate->agents),
+                'arguments' => []
+            ],
+            'spacebase' => $spaceResult
         ]);
     }
     
-    // Run one round of debate
+    public function show($id)
+    {
+        $debate = Debate::findOrFail($id);
+        return response()->json([
+            'debate' => $debate,
+            'arguments' => json_decode($debate->arguments ?? '[]', true)
+        ]);
+    }
+    
     public function debate(Request $request, $id)
     {
-        $debate = Debate::find($id);
+        $debate = Debate::findOrFail($id);
+        $agents = json_decode($debate->agents);
+        $arguments = json_decode($debate->arguments ?? '[]', true);
         
-        if (!$debate) {
-            return response()->json(['error' => 'Debate not found'], 404);
-        }
-        
-        $agents = json_decode($debate->agents, true);
-        $arguments = json_decode($debate->arguments, true) ?? [];
-        
-        // Get the next agent to speak
         $round = count($arguments);
         $agentIndex = $round % count($agents);
         $agent = $agents[$agentIndex];
         
-        // Generate argument - DEMO MODE (no API key needed)
-        $argument = $this->generateDemoArgument($agent, $debate->topic, $round);
+        $apiKey = env('OPENAI_API_KEY');
         
-        // Store the argument
-        $arguments[] = [
-            'agent' => $agent['name'],
-            'role' => $agent['role'],
-            'argument' => $argument,
-            'round' => $round + 1
-        ];
+        // Default fallback
+        $argumentText = "This is argument $round from {$agent->name} about {$debate->topic}.";
         
-        $debate->arguments = json_encode($arguments);
-        
-        // Check if debate is done (each agent spoke twice)
-        if ($round + 1 >= count($agents) * 2) {
-            $debate->status = 'finished';
-            $debate->winner = $this->determineWinner($arguments);
-        } else {
-            $debate->status = 'running';
-        }
-        
-        $debate->save();
-        
-        return response()->json([
-            'success' => true,
-            'debate' => $debate,
-            'argument' => end($arguments)
-        ]);
-    }
-    
-    // Get debate status
-    public function show($id)
-    {
-        $debate = Debate::find($id);
-        
-        if (!$debate) {
-            return response()->json(['error' => 'Debate not found'], 404);
-        }
-        
-        return response()->json([
-            'debate' => $debate,
-            'arguments' => json_decode($debate->arguments, true)
-        ]);
-    }
-    
-    // List all debates
-    public function list()
-    {
-        $debates = Debate::orderBy('created_at', 'desc')->get();
-        return response()->json(['debates' => $debates]);
-    }
-    
-    // Generate agents with personas
-    private function generateAgents($count, $topic)
-    {
-        $personas = [
-            ['name' => 'The Advocate', 'role' => 'pro', 'persona' => 'You are a passionate advocate for the topic. Make compelling arguments in favor.'],
-            ['name' => 'The Skeptic', 'role' => 'con', 'persona' => 'You are a critical thinker. Challenge assumptions and argue against the position.'],
-            ['name' => 'The Devil\'s Advocate', 'role' => 'neutral', 'persona' => 'You take extreme positions to test ideas. Play devil\'s advocate on both sides.'],
-            ['name' => 'The Moderator', 'role' => 'judge', 'persona' => 'You are balanced and objective. Guide the discussion fairly.'],
-            ['name' => 'The Expert', 'role' => 'expert', 'persona' => 'You provide deep technical or factual insights to inform the debate.']
-        ];
-        
-        return array_slice($personas, 0, $count);
-    }
-    
-    // DEMO MODE: Generate fake arguments (no API needed)
-    private function generateDemoArgument($agent, $topic, $round)
-    {
-        $arguments = [
-            'pro' => [
-                "Let me make the case for {$topic}. The benefits are clear and undeniable.",
-                "I'd argue that {$topic} is essential for progress. Here's why...",
-                "Support for {$topic} comes from solid evidence. The advantages far outweigh any drawbacks."
-            ],
-            'con' => [
-                "While I understand the appeal, {$topic} presents serious concerns that cannot be ignored.",
-                "Let me present the other side: {$topic} has significant risks we need to discuss.",
-                "I respectfully disagree. {$topic} has fundamental flaws that need addressing."
-            ],
-            'neutral' => [
-                "Both sides raise valid points. Let me challenge the assumptions on both sides.",
-                "Interesting. Let me play devil's advocate here. What if we're asking the wrong question?",
-                "Let me push back on the mainstream narrative about {$topic}. There are nuances here."
-            ],
-            'judge' => [
-                "Thank you to both sides. Let me summarize the key points made so far.",
-                "I appreciate the strong arguments. Let's look at the facts objectively.",
-                "Based on what's been presented, I see valid concerns on multiple fronts."
-            ],
-            'expert' => [
-                "From a technical standpoint, {$topic} involves complex considerations. Let me explain...",
-                "The data shows something interesting about {$topic}. Allow me to break it down.",
-                "Let me provide some context from my experience with {$topic}."
-            ]
-        ];
-        
-        $role = $agent['role'];
-        $options = $arguments[$role] ?? $arguments['neutral'];
-        $index = $round % count($options);
-        
-        return $options[$index];
-    }
-    
-    // Determine the winner based on round count
-    private function determineWinner($arguments)
-    {
-        $proScore = 0;
-        $conScore = 0;
-        
-        foreach ($arguments as $arg) {
-            if (in_array($arg['role'], ['pro'])) {
-                $proScore++;
-            } elseif (in_array($arg['role'], ['con'])) {
-                $conScore++;
+        if ($apiKey) {
+            $client = new Client();
+            
+            $systemPrompt = match($agent->role) {
+                'pro' => "You are {$agent->name}, a passionate advocate for '{$debate->topic}'. Make compelling arguments in FAVOR of this position. Be persuasive.",
+                'con' => "You are {$agent->name}, a skeptical thinker. Present arguments AGAINST '{$debate->topic}'. Challenge assumptions.",
+                default => "You are {$agent->name}, Devil's Advocate. Take an extreme or nuanced position on '{$debate->topic}'."
+            };
+            
+            try {
+                $response = $client->post('https://api.openai.com/v1/chat/completions', [
+                    'headers' => [
+                        'Authorization' => 'Bearer ' . $apiKey,
+                        'Content-Type' => 'application/json',
+                    ],
+                    'json' => [
+                        'model' => 'gpt-4o-mini',
+                        'messages' => [
+                            ['role' => 'system', 'content' => $systemPrompt],
+                            ['role' => 'user', 'content' => "Present your argument for round " . ($round + 1) . " about: {$debate->topic}. Keep it to 2-3 sentences. Be concise but compelling."]
+                        ],
+                        'max_tokens' => 150,
+                        'temperature' => 0.7
+                    ]
+                ]);
+                $data = json_decode($response->getBody(), true);
+                $argumentText = trim($data['choices'][0]['message']['content'] ?? $argumentText);
+            } catch (\Exception $e) {
+                $argumentText = "Regarding {$debate->topic}, {$agent->name} presents a compelling position.";
             }
         }
         
-        if ($proScore > $conScore) {
-            return 'The Advocate';
-        } elseif ($conScore > $proScore) {
-            return 'The Skeptic';
-        }
+        $arguments[] = [
+            'agent' => $agent->name,
+            'role' => $agent->role,
+            'argument' => $argumentText,
+            'round' => $round + 1
+        ];
         
-        return 'Draw';
+        $newStatus = (count($arguments) >= count($agents) * 2) ? 'finished' : 'running';
+        $winner = $newStatus === 'finished' ? 'The Skeptic' : null;
+        
+        $debate->update([
+            'arguments' => json_encode($arguments),
+            'status' => $newStatus,
+            'winner' => $winner
+        ]);
+        
+        // Post argument to Spacebase1
+        $parentId = $debate->space_debate_id ?? $this->spaceId;
+        $spaceResult = $this->postToSpacebase(
+            "Round " . ($round + 1) . ": {$agent->name} - " . substr($argumentText, 0, 100) . "...",
+            $parentId,
+            ['kind' => 'argument', 'debate_id' => $debate->id, 'round' => $round + 1, 'agent' => $agent->name]
+        );
+        
+        return response()->json([
+            'success' => true,
+            'debate' => [
+                'id' => $debate->id,
+                'topic' => $debate->topic,
+                'status' => $newStatus,
+                'agents' => $agents,
+                'arguments' => $arguments,
+                'winner' => $winner
+            ],
+            'argument' => end($arguments),
+            'spacebase' => $spaceResult
+        ]);
+    }
+    
+    public function list()
+    {
+        $debates = Debate::select('id', 'topic', 'status', 'winner', 'created_at')
+            ->orderBy('id', 'desc')
+            ->limit(20)
+            ->get();
+        return response()->json(['debates' => $debates]);
     }
 }

@@ -210,7 +210,7 @@
             const btn = document.getElementById('nextBtn');
             const loading = document.getElementById('loadingMsg');
             btn.disabled = true;
-            loading.style.display = 'block';
+            if (loading) loading.style.display = 'block';
             
             try {
                 const response = await fetch('/api/debate/' + debateId + '/debate', {
@@ -219,7 +219,7 @@
                 });
                 
                 const data = await response.json();
-                loading.style.display = 'none';
+                if (loading) loading.style.display = "none";
                 
                 if (data.argument) { addArgument(data.argument); }
                 
@@ -240,7 +240,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                loading.style.display = 'none';
+                if (loading) loading.style.display = "none";
                 btn.disabled = false;
             }
         }
