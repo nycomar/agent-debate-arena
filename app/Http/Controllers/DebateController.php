@@ -9,9 +9,9 @@ use GuzzleHttp\Client;
 
 class DebateController extends Controller
 {
-    private $spaceEndpoint = 'https://spacebase1.differ.ac';
-    private $stationToken = 'rF-FhSKnudEjn23CAlL2QkDkUYeaQOZQAFxhRROo3Hc';
-    private $spaceId = 'space-c6e23735-cc40-47fd-9b49-f3a9caa45ea5';
+    private function getSpaceEndpoint() { return env('SPACEBASE_ENDPOINT', 'https://spacebase1.differ.ac'); }
+    private function getStationToken() { return env('SPACEBASE_STATION_TOKEN'); }
+    private function getSpaceId() { return env('SPACEBASE_SPACE_ID', 'space-c6e23735-cc40-47fd-9b49-f3a9caa45ea5'); }
     
     public function index()
     {
@@ -21,7 +21,7 @@ class DebateController extends Controller
     
     private function postToSpacebase($content, $parentId = null, $payload = []) {
         // Use Python SDK via shell
-        $parentId = $parentId ?? $this->spaceId;
+        $parentId = $parentId ?? $this->getSpaceId();
         $payloadJson = json_encode($payload);
         
         // Escape content for Python
@@ -173,7 +173,7 @@ print(json.dumps(result))
         ]);
         
         // Post argument to Spacebase1
-        $parentId = $debate->space_debate_id ?? $this->spaceId;
+        $parentId = $debate->space_debate_id ?? $this->getSpaceId();
         $spaceResult = $this->postToSpacebase(
             "Round " . ($round + 1) . ": {$agent->name} - " . substr($argumentText, 0, 100) . "...",
             $parentId,
