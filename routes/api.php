@@ -220,3 +220,14 @@ Route::post('/debate/{id}/debate', function($id) {
         'argument' => end($arguments)
     ]);
 });
+// Get news topics for debate
+Route::get('/news-topics', function() {
+    try {
+        $response = file_get_contents('https://news.dev13.apextech.agency/api/news/enriched-topics');
+        $data = json_decode($response, true);
+        $topics = $data['topics'] ?? [];
+        return response()->json(['topics' => $topics]);
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage(), 'topics' => []]);
+    }
+});

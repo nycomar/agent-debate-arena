@@ -72,7 +72,7 @@
             </div>
             
             <div class="form-group">
-                <label>Choose a topic:</label>
+                <label>Choose a topic: <button onclick="refreshTopics()" style="background:transparent;border:1px solid #666;color:#aaa;padding:2px 8px;cursor:pointer;font-size:12px;border-radius:4px;">🔄</button></label>
                 <select id="topicSelect">
                     <option value="">-- Select a topic --</option>
                     <option value="Should AI be regulated?">Should AI be regulated?</option>
@@ -253,6 +253,25 @@
             container.appendChild(div);
             container.scrollTop = container.scrollHeight;
         }
+        
+        // Load news topics for dropdown
+        function refreshTopics() {
+            fetch('/api/news-topics')
+                .then(res => res.json())
+                .then(data => {
+                    const select = document.getElementById('topicSelect');
+                    while (select.options.length > 1) select.remove(1);
+                    (data.topics || []).forEach(topic => {
+                        const opt = document.createElement('option');
+                        opt.value = topic.proposition;
+                        opt.textContent = topic.proposition.substring(0, 80) + (topic.proposition.length > 80 ? '...' : '');
+                        select.appendChild(opt);
+                    });
+                })
+                .catch(err => console.log('News topics error:', err));
+        }
+        
+        refreshTopics();
     </script>
 </body>
 </html>
